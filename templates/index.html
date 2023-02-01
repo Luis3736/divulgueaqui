@@ -1,0 +1,151 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <!-- title -->
+    <h1>📣 Divulgue Aqui#4k | SLN</h1>
+    <hr>
+
+    <!-- 1st block -->
+    <!-- cols -->
+    <div class="d-flex remove-for-ss">
+        <!-- left -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <h2>Proposta</h2>
+                <hr>
+                <p>
+                    Está procurando um servidor para divulgar sua mais nova criação, um vídeo do seu YouTube ou mesmo mostrar ao mundo suas incríveis fotos do Instagram?
+                    Você encontrou o lugar certo! Somos uma comunidade repleta de canais que permitem divulgar isso e muito mais.
+                    <a class="theme-white" href="{{ urls.invite }}">Entre</a> agora mesmo e descubra todas as novidades!
+                </p>
+                <p>
+                    Se está cansado de ir em vários lugares e enviar a mesma mensagem inúmera vezes, você também veio ao lugar apropiado.
+                    Temos um bot exclusivo, desenvolvido por nós, capaz de enviar automaticamente para você.
+                    Compare os preços e descubra o melhor para você!
+                </p>
+            </div>
+        </div>
+
+        <!-- right -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <div>
+                    <img id="proposta-img" class='width-img' src="static/imgs/channels/proposta/0.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2nd block -->
+    <!-- cols -->
+    <div class="d-flex remove-for-ss change-for-ss">
+        <!-- left -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <div>
+                    <img id="general-img" class='width-img' src="static/imgs/channels/general/0.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- right -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <h2>Canais</h2>
+                <hr>
+                <p>
+                    Quer divulgar seu servidor, mas não gosta de outras publicações ocultando a sua?
+                    Dividimos canais para isso não acontecer:
+                </p>
+                <ul>
+                    <li>『🛫』┋servidor-grande</li>
+                    <li>『🛫』┋servidor-médio</li>
+                    <li>『🛫』┋servidor-pequeno</li>
+                </ul>
+                <p>
+                    Quer algo ainda mais exclusivo? Nós temos! Chats de parceiros e planos magníficos com canais próprios.
+                    Além disso, cada rede social tem seu lugar:
+                </p>
+                <ul>
+                    <li>『🏮』┋youtube</li>
+                    <li>『🚬』┋twitch</li>
+                    <li>『🏔』┋instagram</li>
+                    <li>『🐦』┋twitter</li>
+                    <li>『🐺』┋facebook</li>
+                    <li>『💸』┋tiktok-kwai</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3rd block -->
+    <!-- cols -->
+    <div class="d-flex remove-for-ss">
+        <!-- left -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <h2>Entretenimento</h2>
+                <hr>
+                <p>
+                   Quer distrair a mente depois de divulgar?
+                   Temos diversos chats de conversa, memes, jogos e economia.
+                   Ganhe planos jogando!
+                   Nossa economia lhe permite trocar diamantes por pacotes reais.
+                   Aproveite!!!
+                </p>
+            </div>
+        </div>
+
+        <!-- right -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <div>
+                    <img id="entretenimento-img" class='width-img' src="static/imgs/channels/entretenimento/0.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4th block -->
+    <!-- cols -->
+    <div class="d-flex remove-for-ss change-for-ss">
+        <!-- left -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <div>
+                    <img id="exclusividade-img" class='width-img' src="static/imgs/channels/exclusividade/0.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- right -->
+        <div class="align-self-center max-width">
+            <div class="texto max-height">
+                <h2>Exclusividade</h2>
+                <hr>
+                <p>
+                    Tenha acesso a canais extremamente exclusivos:
+                </p>
+                <ul>
+                    <li>Sua divulgação poderá ser contemplada por muito mais pessoas!</li>
+                    <li>Seja parceiro do servidor e ganhe maior destaque!</li>
+                    <li>Compre chats e aumente suas visualizações!</li>
+                    <li>Aproveite nosso bot para automatizar seu trabalho!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5th block -->
+    <div class="space"></div>
+    <div class="d-flex justify-content-center">
+        <a class="theme-white" href="{{ urls.invite }}">
+            <img alt="Ícone do Discord" height="36" width="36" src="static/imgs/icons/dc.png">
+            Entre agora mesmo
+        </a>
+    </div>
+{% endblock %}

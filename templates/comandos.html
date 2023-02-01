@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Comandos
+{% endblock %}
+
+{% block main %}
+    <!-- title -->
+    <h1>Comandos do Star Light Network</h1>
+    <hr>
+    <p>Parâmetros necessários são marcados com "&lt;&gt;"; os opcionais, com "[]"</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Comando</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Cargo necessário</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+                <td>Help [página]</td>
+                <td>Mostra comandos do bot, podendo acrescentar as páginas da divulgação (div) ou moderação (mod)</td>
+                <td>@everyone / conforme página</td>
+            </tr>
+            <tr>
+                <td>Ping</td>
+                <td>
+                    Mostra a latência do total do bot e o tempo de conecção com a
+                    <a class="theme-white" href="{{ urls.api }}">API</a>
+                    do
+                    <a class="theme-white" href="{{ urls.discord }}">Discord</a>
+                </td>
+                <td>@everyone</td>
+            </tr>
+            <tr>
+                <td>Comprar</td>
+                <td>
+                    Mostra todos os
+                    <a class="theme-white" href="templates/pacotes.html">pacotes</a>
+                    e possibilita compra de canais separados</td>
+                <td>@everyone</td>
+            </tr>
+            <tr>
+                <td>Div</td>
+                <td>Divulga mensagem configurada nos canais comprados.</td>
+                <td>@Comprador D.S.A</td>
+            </tr>
+            <tr>
+                <td>Salvar &lt;mensagem&gt;</td>
+                <td>Salva nova mensagem para ser divulgada</td>
+                <td>@Comprador D.S.A</td>
+            </tr>
+            <tr>
+                <td>Exp</td>
+                <td>Abreviação de "expiração": mostra tempo para a expiração da compra e tempo slowmode do comando div</td>
+                <td>@Comprador D.S.A</td>
+            </tr>
+            <tr>
+                <td>Lembrar &lt;sim/não&gt;</td>
+                <td>Ativa ou desativa o lembrete automático sempre que é possível divulgar</td>
+                <td>@Comprador D.S.A</td>
+            </tr>
+            <tr>
+                <td>Bc</td>
+                <td>Abreviação de "bater cartão": inicia/finaliza cartão de trabalho diário</td>
+                <td>@❪🔑 ❯❯❯ Staffs</td>
+            </tr>
+            <tr>
+                <td>Ebc &lt;id do cartão&gt; &lt;novo horário&gt;</td>
+                <td>Abreviação de "editar bater cartão": Altera o horário de saída. Favor usar apenas em cartões finalizados</td>
+                <td>@❪🔑 ❯❯❯ Staffs</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

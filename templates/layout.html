@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- add Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- add css -->
+        <link href="static/styles.css" rel="stylesheet">
+
+        <!-- MDN -->
+        <meta property="og:image" content="static/imgs/icons/div-aki.png">
+        <meta property="og:title" content="📣 Divulgue Aqui#4k | SLN">
+        <meta property="og:description" content="Somos um servidor do Discord voltado para as mais diversas formas de divulgação. Promovemos um ambiente simples, rápido e projetado para aumentar a sua visibilidade. Teste e comprove!">
+        
+        <!-- twiter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@Luis71Hen" />
+        
+        <!-- info -->
+        <meta name="author" content="Cristão devoto#0703">
+        <meta name="description" content="Somos um servidor do Discord voltado para as mais diversas formas de divulgação. Promovemos um ambiente simples, rápido e projetado para aumentar a sua visibilidade. Teste e comprove!">
+        
+
+        <!-- site name and icon -->
+        <link rel="apple-touch-icon-precomposed" sizes="256x256" href="static/imgs/icons/div-aki/div-aki256.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="128x128" href="static/imgs/icons/div-aki/div-aki128.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="64x64" href="static/imgs/icons/div-aki/div-aki64.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="48x48" href="static/imgs/icons/div-aki/div-aki48.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="32x32" href="static/imgs/icons/div-aki/div-aki32.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="static/imgs/icons/div-aki/div-aki16.ico">
+        <link rel="icon" type="image/png" href="static/imgs/icons/div-aki.png">
+        <title>{% block title %}{% endblock %}  | 📣 Divulgue Aqui#4k | SLN</title>
+
+
+    </head>
+
+    <body style="background-color: white;">
+
+        <!-- navbar top -->
+        <!-- navbar navbar-expand-md purple -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style='background-color: purple'>
+            <!-- left -->
+            <a class="navbar-brand" href="/">
+                <img alt="Ícone Divulgue Aqui" src="static/imgs/icons/div-aki.png" height="36" width="36">
+            </a>
+
+            <div id='btn-menu' class="btn-group navbar-toggler">
+                <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                </a>
+                <div id='menu' class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item {% if active == '/' %}disabled{% endif %}" href="/">Home</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item {% if active == '/pacotes' %}disabled{% endif %}" href="/pacotes">Pacotes</a>
+                    <a class="dropdown-item {% if active == '/comandos' %}disabled{% endif %}" href="/comandos">Comandos do bot</a>
+                    <a class="dropdown-item {% if active == '/contato' %}disabled{% endif %}" href="/contato">Fale conosco</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item {% if active == '/sobre' %}disabled{% endif %}" href="/sobre">Sobre nós</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item theme" target="_blank" rel="noopener"> 
+                        <img class="theme-img" height="36" width="36" src="static/imgs/icons/sun.png">
+                        Tema
+                    </a>
+                    <a class="dropdown-item" href="{{ urls.invite }}">
+                        <img alt="Ícone do Discord" height="36" width="36" src="static/imgs/icons/dc.png">
+                        Entre no servidor
+                    </a>
+                </div>
+              </div>
+
+
+            <div class="collapse navbar-collapse offcanvas-lg offcanvas-end" id="bdNavbar" data-bs-target="#bdNavbar">
+                <ul class="navbar-nav mr-auto mt-2">
+                    <li class="nav-item">
+                        <a class="link-selecionar nav-link my-link {% if active == '/' %}disabled{% endif %}"
+                            data-opco='home' href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link-selecionar nav-link my-link {% if active == '/pacotes' %}disabled{% endif %}" data-opcao='pacotes' href="/pacotes">Pacotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link-selecionar nav-link my-link {% if active == '/comandos' %}disabled{% endif %}" data-opcao='comando' href="/comandos">Comandos do bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link-selecionar nav-link my-link {% if active == '/contato' %}disabled{% endif %}" data-opcao='contato' href="/contato">Fale conosco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link-selecionar nav-link my-link {% if active == '/sobre' %}disabled{% endif %}" data-opcao='sobre' href="/sobre">Sobre nós</a>
+                    </li>
+                </ul>
+           
+
+                <!-- right -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item col-6 col-lg-auto">
+                        <a class="nav-link py-2 px-0 px-lg-2 theme" target="_blank" rel="noopener">
+                            <img class="theme-img" height="36" width="36" src="static/imgs/icons/sun.png">
+                            <small class="d-lg-none ms-2 text-white">Tema</small>
+                        </a>
+                    </li>
+                    <li class="nav-item col-6 col-lg-auto">
+                        <a class="nav-link py-2 px-0 px-lg-2" href="{{ urls.invite }}">
+                            <img alt="Ícone do Discord" height="36" width="36" src="static/imgs/icons/dc.png">
+                            <small class="d-lg-none ms-2 text-white">Entre no servidor</small>
+                        </a>
+                    </li>
+                  </ul>
+            </div>
+
+        </nav>
+
+
+        <!-- main part -->
+        <main class="container-fluid align-content-start marg">
+            {% block main %}{% endblock %}
+        </main>
+
+        <!-- navbar bottom -->
+        <footer class="navbar purple">
+            <div class="d-flex justify-content-center text-center max-width">
+                <p class="disabled">
+                    By <a class="my-link" href="/sobre">Cristão devoto#0703</a>.
+                    <a class="my-link" href="/sobre">Star Light Network</a>
+                    is a project by <a class="my-link" href="/sobre">Team SLN</a>
+                    &#169; since 2020
+                </p>
+            </div>
+        </footer>
+
+    </body>
+
+    <script>let imgs = {{ imgs | tojson }}</script>
+    <script type="text/javascript" src="static/script.js"></script>
+
+</html>

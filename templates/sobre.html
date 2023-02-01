@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Sobre nós
+{% endblock %}
+
+{% block main %}
+    <!-- title -->
+    <h1>Sobre nós</h1>
+    <hr>
+
+    <h2>Fundador</h2>
+    <hr>
+    <div class='texto max-height'>
+        <p>
+            Eu na época, usava o Skype, só que a maioria das novas pessoas que eu estava conhecendo,
+            eles usavam o discord, e eu nem sabia da existência desse aplicativo, e fui afim de conhecer,
+            criei um servidor em conjunto com meu amigo sobre uma comunidade de monster Hunter, crescemos um pouco.
+        </p>
+        <p>
+            Eu conheci essa categoria de servidores de divulgação, e para crescer esse servidor,
+            me veio a ideia de criar um servidor de divulgação, tinha muitos poucos, crescemos um pouco o servidor,
+            porém meu amigo descontinuou o servidor, e eu continuei com o meu, passando um pouco no tempo.
+        </p>
+        <p>
+            O servidor cresceu bastante, criamos uma network chamada star light,
+            onde possui servidores de todos os tipos de categorias, comunidade, divulgação,
+            lojas e afim de poupar trabalho e facilitar a administração dos servidores,
+            apareceu uma pessoa no servidor querendo ser staff do servidor principal,
+            e essa pessoa conhecia bastante sobre programação, e se fez disposto de fazer o bot da rede pela linguagem python.
+        </p>
+        <p>
+            Atualmente, estamos nesse caminho de aprender programação, eu, quero seguir isso como minha carreira profissional,
+            e estou tomando aulas para no futuro, já ter condição de trabalhar com isso.
+        </p>
+    </div>
+    <div class='d-flex justify-content-center'>
+        <a class='ico-white' href='{{ urls.youtube_fox }}'>
+            <img src='static/imgs/icons/rs/yt.png'>
+        </a>
+        <a class='ico-white' href='{{ urls.twitch_fox }}'>
+            <img src='static/imgs/icons/rs/twitch.png'>
+        </a>
+        <a class='ico-white' href='{{ urls.discord_nate }}'>
+            <img src='static/imgs/icons/rs/dc.png'>
+        </a>
+    </div>
+
+    <div class="space"></div>
+    <h2>Desenvolvedor</h2>
+    <hr>
+    <div class='texto max-height'>
+        <p>
+            Sou, por natureza, um curioso.
+            Tudo começou quando eu decidi entrar para staff deste servidor.
+            Como todo moderador, todos os dias eu tinha que entrar em vários canais e verificar,
+            mensagem por mensagem, algumas características padrões.
+            Uma, em especial, chamou minha atenção: a quantidade de membros.
+            Pensei que deveria haver alguma forma de automatizar isso para mim e me poupar algum trabalho.
+            Surge então a ideia de acrescentar funcionalidades ao bot.
+        </p>
+        <p>
+            Entretanto, eu não tinha muito conhecimento na área de programação.
+            Com isso, pesquisei diversas fontes e descobri a linguagem
+            <a class='theme-white' href="{{ urls.python }}">Python</a>.
+            Encontrei conteúdo e me aperfeiçoei até conseguir criar o que eu precisava.
+            Gostei tanto disso que começei a buscar cursos com certificado,
+            como o de Introdução a Ciência da Computação de Harvard (CS50), no qual o presente site foi desenvolvido.
+            Tenho me aperfeiçoado, desde então, aprendido outras linguagens: C, JS, HTML, CSS;
+            além de bancos de dados como
+            <a class="theme-white" href="{{ urls.firebase }}">Firebase</a> e SQLite.
+        </p>
+        <p>
+            Atualmente estou em busca de novos desafios: aprender inglês é minha nova meta.
+            Espero que gostem do que tenho desenvolvido e que eu possa cada dia mais impressioná-los.
+        </p>
+    </div>
+    <div class='d-flex justify-content-center'>
+        <a class='ico-white' href="{{ urls.face_luis }}">
+            <img src='static/imgs/icons/rs/face.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.insta_luis }}">
+            <img src='static/imgs/icons/rs/insta.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.twitter_luis }}">
+            <img src='static/imgs/icons/rs/twitter.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.youtube_luis }}">
+            <img src='static/imgs/icons/rs/yt.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.twitch_luis }}">
+            <img src='static/imgs/icons/rs/twitch.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.discord_cranio }}">
+            <img src='static/imgs/icons/rs/dc.png'>
+        </a>
+        <a class='ico-white' href="{{ urls.whatsapp_luis }}">
+            <img src='static/imgs/icons/rs/wpp.png'>
+        </a>
+    </div>
+{% endblock %}

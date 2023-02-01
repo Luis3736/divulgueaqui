@@ -1,0 +1,166 @@
+.bd-navbar::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+}
+
+.navbar{
+    padding-left: 10px;
+}
+
+.disabled{
+    color: darkgray;
+    pointer-events: none;
+    cursor: default;
+}
+
+.disabled:hover{
+    color: darkgray;
+}
+
+.marg{
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.my-link{
+    color: white;
+}
+
+.my-link:hover{
+    color: gray;
+}
+
+main{
+    padding: 5%;
+    display: grid;
+    min-height: 100vh;
+    width: auto;
+}
+
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+
+}
+
+h2{
+    text-align: center;
+    font-size: x-large;
+    padding-top: 15px;
+    margin-left: -15px;
+}
+
+h3{
+    text-align: center;
+    font-size: large;
+    padding-top: 15px;
+    margin-left: -15px;
+}
+
+hr{
+  border: 0;
+  width: 50%;
+  height: 3px;
+  margin-bottom: 5%;
+  margin-top: 0.5%;
+  background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+
+.max-width{
+     width: 100%;
+}
+
+.max-height{
+    height: 100%;
+}
+
+.max{
+    width: 100%;
+    height: 100%;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.theme-black:hover{
+    color: white;
+}
+
+.theme-white:hover{
+    color: black;
+}
+
+.texto{
+    text-indent: 5%;
+}
+
+div{
+    margin: 0.5%;
+}
+
+.space{
+    height: 10%;
+}
+
+tr{
+    color: black;
+}
+
+.ico-white{
+    filter: invert(0);
+    margin: 2px;
+}
+
+.ico-black{
+    filter: invert(1);
+    margin: 2px;
+}
+
+.width-img{
+    width: 90%;
+}
+
+.dropdown-toggle::after{
+    content: none;
+}
+
+.column-3 {    
+    width: 20%;    
+}
+
+.column-9 {    
+    width: 40%;    
+}
+
+.label {
+    padding-top: 7px;
+    text-align: right;    
+}
+
+.label:after {
+    content: ':';
+    padding-right: 5px;
+}
+
+.column {
+    float: left;
+    height: 41px;    
+}
+
+.input input {
+    width: 100%;
+    height: 34px;    
+    padding-left: 5px;
+    box-sizing: border-box;
+}
